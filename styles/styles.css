@@ -1,0 +1,162 @@
+:root {
+  --white: #fff;
+  --primary-color: #9cc425;
+  --primary-text: #000;
+  --shadow-color: rgba(0,0,0,.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #cacaca;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* General classes */
+.container {
+  padding: 0 20px;
+}
+
+
+/* Header */
+.header {
+  background: var(--white);
+  position: relative;
+}
+
+.info-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.contact-info {
+  display: none;
+}
+
+
+/* Menu */
+.menu-toggle-container {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+.menu-toggle {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-toggle-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../assets/menu3.svg) 0 0/cover no-repeat;
+}
+.menu-toggle-icon.is-active {
+  background-image: url(../assets/close2.svg);
+}
+
+.nav {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all .3s ease;
+}
+
+.nav.is-active {
+  max-height: 100%;
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+  z-index: 2;
+}
+
+.menu-link {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #494c4f;
+  padding: 10px 20px;
+}
+
+.menu-link.is-active {
+  background-color: #55595c;
+  color: #fff;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  background-color: #55595c;
+  color: #fff;
+}
+
+.dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-arrow {
+  color: #494c4f;
+}
+
+.menu-link:hover .drop-arrow,
+.menu-link:focus .drop-arrow {
+  color: #fff;
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+
+.submenu.is-active {
+  max-height: 500px;
+  transition: max-height .3s ease;
+}
+
+.submenu-link {
+  text-transform: initial;
+  padding-left: 40px;
+}
