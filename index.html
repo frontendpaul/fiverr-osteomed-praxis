@@ -15,12 +15,12 @@
 </head>
 <body>
   <header class="header">
-    <div class="info-bar">
+    <div class="info-bar flex-center">
       <a href="https://osteomed-praxis.de/"><img class="logo" src="./assets/cropped-Logo-2-1-300x111.png" alt=""></a>
       <div class="flex-container contact-info"></div>
     </div>
     <div class="menu-toggle-container">
-      <button class="menu-toggle js-menu-toggle"><i class="menu-toggle-icon js-menu-toggle-icon"></i></button>
+      <button class="menu-toggle flex-center js-menu-toggle"><i class="menu-toggle-icon js-menu-toggle-icon"></i></button>
     </div>
     <nav class="nav js-nav">
       <ul class="menu">
@@ -43,9 +43,50 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <img src="./assets/bilder website bearbeitet/Therapie_im_Zentrum_Eingangsbereich.jpg" alt="">
-  </div>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-shape">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path class="shape-fill" d="M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z"></path> </svg>
+    </div>
+    <div class="hero-content">
+      <h1 class="title-hero">Ihre Praxis für <br><b>physiotherapeutische</b> und <b>osteopathische</b><br><b>Behandlungen </b>in Möckmühl</h1>
+
+      <div class="flex-center">
+        <button class="btn cta-btn js-cta-btn"><i class="btn-icon fas fa-phone"></i>Termin vereinbaren</button>
+      </div>      
+    </div>
+  </section>
+
+  <section class="hero-cards">
+    <div class="hero-shape">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path class="shape-fill" d="M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z"></path> </svg>
+    </div>
+    <div class="cards">
+      <div class="card flex-center" id="hero-card-1">
+        <div class="card-bg-overlay"></div>
+        <div class="card-content flex-center">
+          <h2 class="card-title">Physiotherapie</h2>
+          <a href="https://osteomed-praxis.de/manuelletherapie/" class="btn">Mehr dazu</a>
+        </div>
+      </div>
+
+      <div class="card flex-center" id="hero-card-2">
+        <div class="card-bg-overlay"></div>
+        <div class="card-content flex-center">
+          <h2 class="card-title">Schmerztherapie</h2>
+          <a href="https://osteomed-praxis.de/schmerztherapie/" class="btn">Mehr dazu</a>
+        </div>
+      </div>
+
+      <div class="card flex-center" id="hero-card-3">
+        <div class="card-bg-overlay"></div>
+        <div class="card-content flex-center">
+          <h2 class="card-title">Osteopathie</h2>
+          <a href="https://osteomed-praxis.de/osteopathie/" class="btn">Mehr dazu</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="./scripts/index.js"></script>
 </body>
