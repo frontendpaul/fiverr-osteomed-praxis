@@ -467,6 +467,10 @@ button {
   transition: max-height .2s linear;
 }
 
+.is-active.about-text::after {
+  display: none;
+}
+
 .unfold-btn-wrapper {
   margin-top: 15px;
 }
