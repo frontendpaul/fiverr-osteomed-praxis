@@ -12,3 +12,19 @@ menuToggleBtn.addEventListener('click', (e) => {
 submenuToggleBtn.addEventListener('click', () => {
   submenuContainer.classList.toggle('is-active');
 })
+
+
+const unfoldToggleBtn = document.querySelector('.js-toggle-unfold');
+const unfoldToggleBtnText = document.querySelector('.js-toggle-unfold>span');
+const unfoldText = document.querySelector('.js-unfold-text');
+
+unfoldToggleBtn.addEventListener('click', () => {
+  unfoldText.classList.toggle('is-active');
+  unfoldToggleBtn.classList.toggle('is-active');
+
+  if (unfoldToggleBtn.classList.contains('is-active')) {
+    unfoldToggleBtnText.innerText = 'Weniger';
+  } else {
+    unfoldToggleBtnText.innerText = 'Alles anzeigen';
+  }
+})

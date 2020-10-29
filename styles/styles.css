@@ -17,11 +17,17 @@ html {
 
 body {
   margin: 0;
-  background: #cacaca;
+  overflow-x: hidden;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+}
+
+p {
+  margin: 0 0 .9rem;
+  line-height: 1.5;
 }
 
 b {
@@ -38,7 +44,34 @@ button {
 
 /* General classes */
 .container {
-  padding: 0 20px;
+  padding: 20px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title,
+.section-title,
+.section-subtitle {
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;  
+}
+
+.section-title {
+  font-size: 25px;
+}
+
+.section-subtitle {
+  font-size: 18px;
 }
 
 .btn {
@@ -57,16 +90,22 @@ button {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,.15);
 }
 
 .btn-icon {
   margin-right: 25px;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-dwon-icon {
+  margin-right: 10px;
+  /* transform: scale(1.35); */
+}
+
+.devider-line {
+  height: 1px;
+  background: var(--primary-text);
+  margin: 25px 0;
 }
 
 .fa-phone {
@@ -223,6 +262,7 @@ button {
   width: 100%;
   position: absolute;
   bottom: -5px;
+  overflow-x: hidden;
 }
 
 .hero-shape svg {
@@ -244,7 +284,7 @@ button {
   top: 0;
 }
 
-.title-hero {
+.hero-title {
   font-style: italic;
   font-weight: 400;
   font-size: 25px;
@@ -266,7 +306,7 @@ button {
 .hero-cards .cards {
   position: relative;
   top: -230px;
-  height: 900px;
+  height: 800px;
 }
 
 .hero-cards .shape-fill {
@@ -320,4 +360,132 @@ button {
 }
 #hero-card-3 {
   background-image: url(../assets/osteomed_schmerztherapie_03.png);
+}
+
+
+/* Double Down Arrow */
+.double-down-icon {
+  color: var(--primary-color);
+  transform: scale(4);
+  margin: 2rem 0;
+}
+
+
+/* Us Section */
+.us-img {
+  display: block;
+  width: 250px;
+  height: auto;
+  margin: 0 auto 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,.15);
+}
+
+.smile {
+  width: 120px;
+  height: 120px;
+}
+
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 60px 0 20px;
+}
+
+.services-grid-item {
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,.15);
+}
+
+.services-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-icon {
+  width: 125px;
+  height: 125px;
+  margin-bottom: 20px;
+}
+
+.services-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/* Appointment CTA */
+.appointment-cta {
+  padding: 0 20px;
+}
+
+
+/* About Section */
+.about-wrapper {
+  padding-left: 20px;
+  border-left: 1px solid var(--primary-text);
+}
+
+.about-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.about-text {  
+  overflow: hidden;
+  max-height: 100px;
+  color: rgba(0,0,0,.8);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  position: relative;
+  transition: max-height .2s linear;
+}
+
+.about-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+  z-index: 2;
+}
+
+.about-text.is-active {
+  max-height: 900px;
+  transition: max-height .2s linear;
+}
+
+.unfold-btn-wrapper {
+  margin-top: 15px;
+}
+
+.unfold-btn {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+  line-height: 1.5;
+  position: relative;
+  bottom: 0;
+  z-index: 3;
+}
+
+.unfold-btn .btn-dwon-icon {
+  transition: transform .3s linear;
+}
+
+.unfold-btn.is-active .btn-dwon-icon {
+  transform: rotate(180deg);
+  transition: transform .3s linear;
 }
