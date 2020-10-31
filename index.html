@@ -211,6 +211,119 @@
     </div>
   </section>
 
+  <div class="gallery container">
+    <!-- siema slider -->
+    <div class="slider">
+      <div class="slide">
+        <img src="./assets/Therapie_im_Zentrum_Eingangsbereich.jpg" alt="" class="slide-img">
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="prev"><i class="fas fa-chevron-right fa-4x"></i></button>
+      <button class="next"><i class="fas fa-chevron-right fa-4x"></i></button>
+    </div>
+  </div>
+
+  <section class="contact-section container">
+    <div class="contact">
+      <h2 class="title contact-title">Keine Zeit für ein Telefonat?<br> <b>Kein Problem - Schreiben Sie uns!</b></h2>
+
+      <div class="contact-container">
+        <div class="paginator">
+          <div class="paginator-item paginator-item-1 is-active">
+            <div class="paginator-item-circle">1</div>
+            <span class="paginator-item-title">Kontaktdaten</span>
+          </div>
+
+          <div class="paginator-devider"></div>
+
+          <div class="paginator-item paginator-item-2">
+            <div class="paginator-item-circle">2</div>
+            <span class="paginator-item-title">Thema der Anfrage</span>
+          </div>
+
+          <div class="paginator-devider"></div>
+          
+          <div class="paginator-item paginator-item-3">
+            <div class="paginator-item-circle">3</div>
+            <span class="paginator-item-title">Erreichbarkeit</span>
+          </div>
+        </div>
+
+        <div class="contact-slides">
+          <form action="" class="form">
+            <div class="contact-slide contact-slide-1 is-active">
+              <div class="form-group">
+                <label class="hidden-text" for="vorname">Vorname</label>
+                <input class="text-field" type="text" name="vorname" id="vorname" placeholder="Vorname" required >
+              </div>
+  
+              <div class="form-group">
+                <label class="hidden-text" for="nachname">Nachname</label>
+                <input class="text-field" type="text" name="nachname" id="nachname" placeholder="Nachname" required >
+              </div>
+  
+              <div class="form-group">
+                <label class="hidden-text" for="email">E-Mail</label>
+                <input class="text-field" type="email" name="email" id="email" placeholder="E-Mail" required >
+              </div>
+  
+              <div class="form-group">
+                <label class="hidden-text" for="telefonnumer">Telefonnumer</label>
+                <input class="text-field" type="tel" name="telefonnumer" id="telefonnumer" placeholder="Telefonnumer" required >
+              </div>
+  
+              <div class="flex-center">
+                <input type="button" value="weiter" class="btn form-btn js-form-btn-next-1">
+              </div>
+            </div>
+
+            <div class="contact-slide contact-slide-2">  
+              <div class="form-group">
+                <div class="custom-select-wrapper">
+                  <select name="service" id="service" class="text-field custom-select"><option value="Professionelle Massage">Professionelle Massage</option><option value="Triggerpunkt-Behandlung">Triggerpunkt-Behandlung</option><option value="Schlingentisch">Schlingentisch</option><option value="Elektrotherapie">Elektrotherapie</option><option value="Schmerztherapie">Schmerztherapie</option><option value="Physiotherapie">Physiotherapie</option><option value="Wärmetherapie">Wärmetherapie</option><option value="Kryotherapie">Kryotherapie</option><option value="Allgemeine Kontaktanfrage">Allgemeine Kontaktanfrage</option> </select>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <div class="custom-select-wrapper">
+                  <select name="rezept" id="rezept" class="text-field custom-select"><option value="Ich habe ein Rezept der Krankenkasse">Ich habe ein Rezept der Krankenkasse</option><option value="Ich komme privat, ohne Rezept">Ich komme privat, ohne Rezept</option> </select>
+                </div>
+              </div>
+  
+              <div class="flex-center">
+                <input type="button" value="zurück" class="btn form-btn form-btn-secondary js-form-btn-prev-1">
+                <input type="button" value="weiter" class="btn form-btn js-form-btn-next-2">
+              </div>
+            </div>
+
+            <div class="contact-slide contact-slide-3">  
+              <div class="form-group">
+                <label class="hidden-text" for="date">Tag</label>
+                <input type="date" name="date" id="date" class="text-field" placeholder="Wann benötigen Sie einen Termin? (bei mehreren bitte den frühst möglichen angeben)">                
+              </div>
+
+              <div class="form-group">
+                <label class="hidden-text" for="uhrzeit">Tag</label>
+                <input type="time" name="uhrzeit" id="uhrzeit" class="text-field" placeholder="Uhrzeit">            
+              </div>
+
+              <div class="form-group">
+                <label class="hidden-text" for="nachricht">Nachricht</label>
+                <textarea name="nachricht" id="nachricht" class="text-field textarea" placeholder="Nachricht" rows="4"></textarea>               
+              </div>
+  
+              <div class="flex-center">
+                <input type="button" value="zurück" class="btn form-btn form-btn-secondary js-form-btn-prev-2">
+                <button type="submit" class="btn form-btn js-form-btn-next">Unverbindliche Anfrage senden</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -28,3 +28,43 @@ unfoldToggleBtn.addEventListener('click', () => {
     unfoldToggleBtnText.innerText = 'Alles anzeigen';
   }
 })
+
+
+const nextFormBtn1 = document.querySelector('.js-form-btn-next-1');
+const nextFormBtn2 = document.querySelector('.js-form-btn-next-2');
+const prevFormBtn1 = document.querySelector('.js-form-btn-prev-1');
+const prevFormBtn2 = document.querySelector('.js-form-btn-prev-2');
+const formSlide1 = document.querySelector('.contact-slide-1');
+const formSlide2 = document.querySelector('.contact-slide-2');
+const formSlide3 = document.querySelector('.contact-slide-3');
+const paginatorItem1 = document.querySelector('.paginator-item-1');
+const paginatorItem2 = document.querySelector('.paginator-item-2');
+const paginatorItem3 = document.querySelector('.paginator-item-3');
+
+nextFormBtn1.addEventListener('click', () => {
+  formSlide1.classList.toggle('is-active');
+  formSlide2.classList.toggle('is-active');
+  paginatorItem1.classList.toggle('is-filled');
+  paginatorItem2.classList.toggle('is-active');
+})
+
+nextFormBtn2.addEventListener('click', () => {
+  formSlide2.classList.toggle('is-active');
+  formSlide3.classList.toggle('is-active');
+  paginatorItem2.classList.toggle('is-filled');
+  paginatorItem3.classList.toggle('is-active');
+})
+
+prevFormBtn1.addEventListener('click', () => {
+  formSlide1.classList.toggle('is-active');
+  formSlide2.classList.toggle('is-active');
+  paginatorItem1.classList.toggle('is-filled');
+  paginatorItem2.classList.toggle('is-active');
+})
+
+prevFormBtn2.addEventListener('click', () => {
+  formSlide2.classList.toggle('is-active');
+  formSlide3.classList.toggle('is-active');
+  paginatorItem2.classList.toggle('is-filled');
+  paginatorItem3.classList.toggle('is-active');
+})
