@@ -1,19 +1,22 @@
+// Mobile Menu Toggler Handler
 const menuToggleBtn = document.querySelector('.js-menu-toggle');
 const menuToggleIcon = document.querySelector('.js-menu-toggle-icon');
 const navContainer = document.querySelector('.js-nav');
-const submenuToggleBtn = document.querySelector('.js-dropdown-menu');
-const submenuContainer = document.querySelector('.js-submenu');
 
 menuToggleBtn.addEventListener('click', (e) => {
   menuToggleIcon.classList.toggle('is-active');
   navContainer.classList.toggle('is-active');
 })
 
+// Submenu Handler
+const submenuToggleBtn = document.querySelector('.js-dropdown-menu');
+const submenuContainer = document.querySelector('.js-submenu');
+
 submenuToggleBtn.addEventListener('click', () => {
   submenuContainer.classList.toggle('is-active');
 })
 
-
+// 
 const unfoldToggleBtn = document.querySelector('.js-toggle-unfold');
 const unfoldToggleBtnText = document.querySelector('.js-toggle-unfold>span');
 const unfoldText = document.querySelector('.js-unfold-text');
@@ -30,41 +33,30 @@ unfoldToggleBtn.addEventListener('click', () => {
 })
 
 
-const nextFormBtn1 = document.querySelector('.js-form-btn-next-1');
-const nextFormBtn2 = document.querySelector('.js-form-btn-next-2');
-const prevFormBtn1 = document.querySelector('.js-form-btn-prev-1');
-const prevFormBtn2 = document.querySelector('.js-form-btn-prev-2');
-const formSlide1 = document.querySelector('.contact-slide-1');
-const formSlide2 = document.querySelector('.contact-slide-2');
-const formSlide3 = document.querySelector('.contact-slide-3');
-const paginatorItem1 = document.querySelector('.paginator-item-1');
-const paginatorItem2 = document.querySelector('.paginator-item-2');
-const paginatorItem3 = document.querySelector('.paginator-item-3');
+const formNavigationHandler = function(id) {
+  // Get Id of clicked element and parse integer of it
+  const idNumber = parseInt(id.match(/\d+/));
+  // Toggle visibility of current slide
+  document.querySelector(`.contact-slide-${idNumber}`).classList.toggle('is-active');
+  // Toggle visibility of next slide
+  document.querySelector(`.contact-slide-${idNumber+1}`).classList.toggle('is-active');
+  // Toggle fill effect of paginator
+  document.querySelector(`.paginator-item-${idNumber}`).classList.toggle('is-filled');
+  // Toggle marking fo paginator
+  document.querySelector(`.paginator-item-${idNumber+1}`).classList.toggle('is-active');
+}
 
-nextFormBtn1.addEventListener('click', () => {
-  formSlide1.classList.toggle('is-active');
-  formSlide2.classList.toggle('is-active');
-  paginatorItem1.classList.toggle('is-filled');
-  paginatorItem2.classList.toggle('is-active');
-})
-
-nextFormBtn2.addEventListener('click', () => {
-  formSlide2.classList.toggle('is-active');
-  formSlide3.classList.toggle('is-active');
-  paginatorItem2.classList.toggle('is-filled');
-  paginatorItem3.classList.toggle('is-active');
-})
-
-prevFormBtn1.addEventListener('click', () => {
-  formSlide1.classList.toggle('is-active');
-  formSlide2.classList.toggle('is-active');
-  paginatorItem1.classList.toggle('is-filled');
-  paginatorItem2.classList.toggle('is-active');
-})
-
-prevFormBtn2.addEventListener('click', () => {
-  formSlide2.classList.toggle('is-active');
-  formSlide3.classList.toggle('is-active');
-  paginatorItem2.classList.toggle('is-filled');
-  paginatorItem3.classList.toggle('is-active');
-})
+// Next Form Button Handler
+const formNextBtns = document.querySelectorAll('.js-form-btn-next');
+for (const formNextBtn of formNextBtns) {
+  formNextBtn.addEventListener('click', (e) => {
+    formNavigationHandler(e.target.id);
+  });
+}
+// Previous Form Button Handler
+const formPrevBtns = document.querySelectorAll('.js-form-btn-prev');
+for (const formPrevBtn of formPrevBtns) {
+  formPrevBtn.addEventListener('click', (e) => {
+    formNavigationHandler(e.target.id);
+  });
+}

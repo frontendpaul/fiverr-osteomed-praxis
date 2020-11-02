@@ -14,7 +14,7 @@
   <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.5.1" type="text/css" media="all">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="info-bar flex-center">
       <a href="https://osteomed-praxis.de/"><img class="logo" src="./assets/cropped-Logo-2-1-300x111.png" alt=""></a>
       <div class="flex-container contact-info"></div>
@@ -48,12 +48,14 @@
     <div class="hero-shape">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path class="shape-fill" d="M500,97C126.7,96.3,0.8,19.8,0,0v100l1000,0V1C1000,19.4,873.3,97.8,500,97z"></path> </svg>
     </div>
-    <div class="hero-content">
-      <h1 class="hero-title">Ihre Praxis für <br><b>physiotherapeutische</b> und <b>osteopathische</b><br><b>Behandlungen </b>in Möckmühl</h1>
-
-      <div class="flex-center">
-        <button class="btn cta-btn js-cta-btn"><i class="btn-icon fas fa-phone"></i>Termin vereinbaren</button>
-      </div>      
+    <div class="flex-center">
+      <div class="hero-content">
+        <h1 class="hero-title">Ihre Praxis für <br><b>physiotherapeutische</b> und <b>osteopathische</b><br><b>Behandlungen </b>in Möckmühl</h1>
+  
+        <div class="flex-center">
+          <button class="btn cta-btn js-cta-btn"><i class="btn-icon fas fa-phone"></i>Termin vereinbaren</button>
+        </div>      
+      </div>
     </div>
   </section>
 
@@ -251,30 +253,34 @@
         </div>
 
         <div class="contact-slides">
-          <form action="" class="form">
+          <form action="">
             <div class="contact-slide contact-slide-1 is-active">
-              <div class="form-group">
-                <label class="hidden-text" for="vorname">Vorname</label>
-                <input class="text-field" type="text" name="vorname" id="vorname" placeholder="Vorname" required >
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="hidden-text" for="vorname">Vorname</label>
+                  <input class="text-field" type="text" name="vorname" id="vorname" placeholder="Vorname">
+                </div>
+    
+                <div class="form-group">
+                  <label class="hidden-text" for="nachname">Nachname</label>
+                  <input class="text-field" type="text" name="nachname" id="nachname" placeholder="Nachname">
+                </div>
               </div>
   
-              <div class="form-group">
-                <label class="hidden-text" for="nachname">Nachname</label>
-                <input class="text-field" type="text" name="nachname" id="nachname" placeholder="Nachname" required >
-              </div>
-  
-              <div class="form-group">
-                <label class="hidden-text" for="email">E-Mail</label>
-                <input class="text-field" type="email" name="email" id="email" placeholder="E-Mail" required >
-              </div>
-  
-              <div class="form-group">
-                <label class="hidden-text" for="telefonnumer">Telefonnumer</label>
-                <input class="text-field" type="tel" name="telefonnumer" id="telefonnumer" placeholder="Telefonnumer" required >
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="hidden-text" for="email">E-Mail</label>
+                  <input class="text-field" type="email" name="email" id="email" placeholder="E-Mail">
+                </div>
+    
+                <div class="form-group">
+                  <label class="hidden-text" for="telefonnumer">Telefonnumer</label>
+                  <input class="text-field" type="tel" name="telefonnumer" id="telefonnumer" placeholder="Telefonnumer">
+                </div>
               </div>
   
               <div class="flex-center">
-                <input type="button" value="weiter" class="btn form-btn js-form-btn-next-1">
+                <input type="button" value="weiter" class="btn form-btn js-form-btn-next" id="js-form-btn-next-1">
               </div>
             </div>
 
@@ -292,8 +298,8 @@
               </div>
   
               <div class="flex-center">
-                <input type="button" value="zurück" class="btn form-btn form-btn-secondary js-form-btn-prev-1">
-                <input type="button" value="weiter" class="btn form-btn js-form-btn-next-2">
+                <input type="button" value="zurück" class="btn form-btn btn-secondary js-form-btn-prev" id="js-form-btn-prev-1">
+                <input type="button" value="weiter" class="btn form-btn js-form-btn-next" id="js-form-btn-next-2">
               </div>
             </div>
 
@@ -314,8 +320,8 @@
               </div>
   
               <div class="flex-center">
-                <input type="button" value="zurück" class="btn form-btn form-btn-secondary js-form-btn-prev-2">
-                <button type="submit" class="btn form-btn js-form-btn-next">Unverbindliche Anfrage senden</button>
+                <input type="button" value="zurück" class="btn form-btn btn-secondary js-form-btn-prev" id="js-form-btn-prev-2">
+                <button type="submit" class="btn form-btn">Unverbindliche Anfrage senden</button>
               </div>
             </div>
           </form>
@@ -323,6 +329,48 @@
       </div>
     </div>
   </section>
+
+  <footer class="footer container">
+    <div class="flex-container">
+      <div class="flex-50">
+        <h4 class="title section-title footer-title">Erfahrung zahlt sich aus</h4>
+        <div class="footer-copy">
+          <p>Unsere Praxis besteht bereits seit weit über 10 Jahren, in welchen wir unsere Erfahrung und Angebote stetig erweitert haben um Ihnen als Patient das bestmögliche Ergebnis zu liefern.</p>
+          <p><b>Worauf warten Sie noch? Kommen Sie vorbei!</b></p>
+        </div>
+
+        <ul class="menu footer-menu">
+          <li class="menu-item"><a href="https://osteomed-praxis.de/impressum/" class="">Impressum</a></li>
+          <li class="menu-item"><a href="https://osteomed-praxis.de/datenschutz/" class="">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="flex-50 testimonials">
+        <div class="testimonials-card">
+          <div class="testimonials-copy"> Tolle Behandlung. Vor allem Eva hat magische Hände😁 Gibt noch Tipps und ist witzig. Fühle mich total wohl. Kann ich nur weiter empfehlen.</div>
+          <div class="testimonials-auth">
+            <img src="./assets/photo-1.png" alt="" class="testimonials-auth-img">
+            <div>
+              <span class="testimonials-name">Wolfgang Golder</span>
+              <span class="testimonials-title">Google Bewertung</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-paginator flex-center">
+          <div class="paginator-dot"></div>
+          <div class="paginator-dot is-active"></div>
+          <div class="paginator-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright flex-container">
+      <a href="https:fitmotion.de">Osteomed 2020 © All Rights Reserved. Powered by fitmotion</a>
+      <div class="flex-center">
+        <a href="#header"><i aria-hidden="true" class="fas fa-angle-up fa-3x"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script src="./scripts/index.js"></script>
 </body>
