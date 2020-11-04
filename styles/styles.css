@@ -12,7 +12,7 @@
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;scroll-behavior: smooth;
 }
 
 body {
@@ -72,6 +72,10 @@ button {
 
 .section-subtitle {
   font-size: 18px;
+}
+
+.text-initial {
+  text-transform: initial;
 }
 
 .hidden-text {
@@ -579,9 +583,14 @@ button {
 .slider {
 }
 
+.slide {
+  width: 100%;
+}
+
 .slide-img {
   display: block;
-  max-width: 100%;
+  width: auto;
+  max-height: 300px;
 }
 
 .prev,
@@ -720,6 +729,10 @@ button {
   padding: 20px;
 }
 
+.testimonials-card {
+  width: calc(100% - 40px)
+}
+
 .testimonials-copy {
   position: relative;
   padding: 45px;
@@ -751,6 +764,7 @@ button {
   display: block;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
   margin-right: 10px;
 }
 
@@ -768,7 +782,9 @@ button {
   color: #686868;
 }
 
-.testimonials-paginator {
+.dots {
+  display: flex;
+  justify-content: center;
   margin: 50px 0 30px;
 }
 
@@ -818,6 +834,68 @@ button {
   transition: all .3s ease;
 }
 
+
+/* Modal */
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  /* transform: translateX(-50%); */
+  background: rgba(255,255,255,.8);
+  display: none;
+  overflow: auto;
+}
+
+.modal-container.is-active {
+  display: block;
+}
+
+.modal-title {
+  text-align: left;
+  margin-top: 0;
+}
+
+.close-btn {
+  width: 15px;
+  height: 15px;
+  background: url(../assets/close.svg) 0 0/cover no-repeat;
+  position: fixed;  
+  top: 20px;
+  right: 30px;
+}
+
+.modal {
+  width: 100%;
+  background-color: transparent;
+  background-image: linear-gradient( 300deg,#9cc425 0%,#fff 48%);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+  transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.modal-img {
+  display: block;
+  width: 135px;
+  margin: 0 auto;
+}
+
+.modal-form .text-field {
+  border-radius: 5px;
+}
+
+.modal-form .form-btn {
+  background: var(--primary-text);
+  color: var(--white);
+  width: 100%;
+}
+
+.modal-form .btn-secondary{
+  background: #61ce70;
+}
 
 
 @media (min-width: 768px) {
