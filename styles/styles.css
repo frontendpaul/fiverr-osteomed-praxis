@@ -199,10 +199,6 @@ button {
   z-index: 2;
 }
 
-.info-bar {
-  padding: 20px;
-}
-
 .logo {
   display: block;
   width: 150px;
@@ -219,6 +215,10 @@ button {
   position: absolute;
   top: 30px;
   left: 20px;
+}
+
+.menu-toggle-container .container {
+  padding: 0;
 }
 
 .menu-toggle {
@@ -375,7 +375,7 @@ button {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 20px;
+  padding: 0 20px;
 }
 
 .hero-cards {
@@ -653,11 +653,10 @@ button {
   flex-direction: column;
   align-items: center;
 }
-/* 
-.paginator-item:not(:first-of-type),
-.paginator-item:not(:last-of-type) {
-  margin: 0 10px;
-} */
+
+.paginator-item:nth-of-type(3) {
+  margin: 0 15px;
+}
 
 .paginator-item.is-active {
   color: var(--primary-color);
@@ -761,7 +760,6 @@ button {
 .testimonials-auth {
   margin-top: 35px;
   padding: 0 45px;
-  display: flex;
 }
 
 .testimonials-auth-img {
@@ -770,7 +768,7 @@ button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .testimonials-name {
@@ -921,10 +919,11 @@ button {
 
   .cards {    
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
 
   .card {
-    width: 30%;
+    width: 33%;
     margin: 10px;
   }
 
@@ -932,14 +931,17 @@ button {
   /* Header */
   .info-bar {
     padding: 10px 20px;
+    justify-content: space-between;
   }
 
   .contact-info {
     display: flex;
+    width: 100%;
   }
   
   .contact-info-wrapper {
     margin: 0 20px;
+    width: 33%;
     min-width: 140px;
   }
   .contact-info-icon {
@@ -1001,6 +1003,7 @@ button {
   .us,
   .us-imgs {
     display: flex;
+    flex-wrap: nowrap;
   }
 
   .us-imgs {
@@ -1008,8 +1011,7 @@ button {
   }
 
   .us-img {
-    width: auto;
-    height: 224px;
+    width: 50%;
     margin: 0 10px;
   }
 
@@ -1052,11 +1054,27 @@ button {
   .unfold-btn-wrapper {
     justify-content: initial;
   }
+
+  /* Gallery */
+  .slider {
+    width: 95%;
+    margin: 0 auto;
+  }
   
 
-  /* Contact form */
+  /* Contact */
+  .contact {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-title {
+    font-size: 35px;
+  }
+
   .paginator-item:nth-of-type(3) {
-    width: 60%;
+    min-width: 125px;
+    margin: 0;
   }
 
   .form-row,
@@ -1082,7 +1100,7 @@ button {
     text-align: left;
   }
 
-  .footer-copyright {
+  .footer-copyright .flex-container{
     justify-content: space-between;
     align-items: center;
   }
@@ -1090,8 +1108,136 @@ button {
   .footer-copyright > a:first-of-type {
     margin: 0;
   }
+
+
+
+  /* Modal */
+  .modal-container {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .modal-container.is-active {
+    display: flex;
+  }
+  
+  .modal-wrapper {
+    max-width: 750px; 
+    position: relative;   
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0;
+  }
+
+  .modal {
+    padding-right: 20em;
+    position: relative;
+  }
+  .modal-img {
+    width: 360px;
+    position: absolute;
+    right: -60px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
 
+  .title,
+  .section-title,
+  .section-subtitle {
+    text-align: left;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+  }
+
+
+  /* Header */
+  .contact-info {
+    max-width: 835px;
+  }
+
+  .contact-info-text-wrapper {
+    font-size: 13px;
+  }
+  
+  .contact-info-title {
+    font-size: 17px;
+    margin: 0 0 .5em 0;
+  }
+
+
+  /* Menu */
+  .menu-toggle-container {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    max-height: 100%;
+    transform: scale(1);
+    background: var(--primary-color);
+  }
+
+  .menu {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .menu-link {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 18px 31px;
+  }
+
+  .drop-arrow {
+    color: var(--white);
+    margin-left: 1em;
+  }
+
+  .submenu {
+    display: block;
+    position: absolute;
+    min-width: 12em;
+  }
+
+  .submenu-link {
+    background: var(--white);
+    color: var(--dark-grey);
+    padding: 10px 20px;
+  }
+
+
+
+  /* Hero */
+  .hero-title {
+    margin: 2.5em 0 1em;
+  }
+
+  .hero-cards .cards{
+    top: -200px;
+  }
+
+  .card {
+    height: 450px;
+  }
+
+
+
+  .contact-title {
+    text-align: center;
+  }
 }

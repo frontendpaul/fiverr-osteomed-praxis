@@ -46,7 +46,8 @@ let mySiema = new Siema({
   duration: 500,    
   loop: true,
   perPage: {
-    768: 2
+    768: 2,
+    1024: 3,
   }
 });
 
