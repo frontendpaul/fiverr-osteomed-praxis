@@ -41,10 +41,13 @@ class SiemaWithDots extends Siema {
   }
 }
 
-const mySiema = new Siema({
+let mySiema = new Siema({
   easing: "cubic-bezier(0.76, 0, 0.24, 1)",
   duration: 500,    
-  loop: true
+  loop: true,
+  perPage: {
+    768: 2
+  }
 });
 
 const prev = document.querySelector(".prev");
