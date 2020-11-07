@@ -41,22 +41,23 @@ class SiemaWithDots extends Siema {
   }
 }
 
-let mySiema = new Siema({
-  easing: "cubic-bezier(0.76, 0, 0.24, 1)",
-  duration: 500,    
-  loop: true,
-  perPage: {
-    768: 2,
-    1024: 3,
-  }
-});
-
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-prev.addEventListener("click", () => mySiema.prev());
-next.addEventListener("click", () => mySiema.next());
-
-setInterval(() => mySiema.next(), 5000);
+if (document.querySelector(".siema") != null) {
+  let mySiema = new Siema({
+    easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+    duration: 500,    
+    loop: true,
+    perPage: {
+      768: 2,
+      1024: 3,
+    }
+  });
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
+  prev.addEventListener("click", () => mySiema.prev());
+  next.addEventListener("click", () => mySiema.next());
+  
+  setInterval(() => mySiema.next(), 5000);
+}
 
 
 
