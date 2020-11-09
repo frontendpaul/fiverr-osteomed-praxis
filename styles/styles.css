@@ -168,14 +168,14 @@ button {
   font-weight: 700;
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,.15);
   transform: scale(1);
-  transition: transform .3s ease;
+  transition: all .3s ease;
 }
 
 .cta-btn:hover {
   background: var(--primary-color);
   color: var(--white);
   transform: scale(.9);
-  transition: transform .3s ease;
+  transition: all .3s ease;
 }
 
 .form-btn {
@@ -438,6 +438,8 @@ button {
   border-radius: 11px;
   background: #850000;
   mix-blend-mode: hue;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
 .card-content {
@@ -451,6 +453,8 @@ button {
   font-weight: 600;
   color: var(--white);
   text-shadow: 0 0 5px rgba(0,0,0,1);
+  transform: translateY(0);
+  transition: transform 1s ease;
 }
 
 #hero-card-1 {
@@ -461,6 +465,26 @@ button {
 }
 #hero-card-3 {
   background-image: url(../assets/osteomed_schmerztherapie_03.png);
+}
+/* Cards Animations */
+.card:hover .card-bg-overlay {
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+.card:hover .card-title {
+  transform: translateY(-20px);
+  transition: transform 1s ease;
+}
+
+.card-btn {
+  transform: translateY(0);
+  transition: transform 1s ease .3s;
+}
+
+.card:hover .card-btn {
+  transform: translateY(-20px);
+  transition: transform 1s ease .3s;
 }
 
 
@@ -500,6 +524,13 @@ button {
   padding: 10px;
   border-radius: 25px;
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,.15);
+  transform: scale(1);
+  transition: transform .3s ease;
+}
+
+.services-grid-item:hover {
+  transform: scale(.9);
+  transition: transform .3s ease;
 }
 
 .services-link {
