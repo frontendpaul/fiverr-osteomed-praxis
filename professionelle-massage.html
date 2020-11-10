@@ -199,109 +199,112 @@
       <div class="modal">
         <img src="./assets/woman1-916x1024.png" alt="" class="modal-img">
   
-        <h2 class="section-title text-initial"><a href="tel:07136%20-%2096%2078%20612">Jetzt anrufen<br>06298 92 78 33<br>oder schreiben</a></h2>
-  
-  
-        <div class="contact-container" id="modal-contact-form">
-          <div class="paginator">
-            <div class="paginator-item paginator-item-1 is-active">
-              <div class="paginator-item-circle">1</div>
-              <span class="paginator-item-title">Kontaktdaten</span>
-            </div>
+        <div class="">
+          <h2 class="section-title text-initial"><a href="tel:07136%20-%2096%2078%20612">Jetzt anrufen<br>06298 92 78 33<br>oder schreiben</a></h2>
     
-            <div class="paginator-devider"></div>
     
-            <div class="paginator-item paginator-item-2">
-              <div class="paginator-item-circle">2</div>
-              <span class="paginator-item-title">Thema der Anfrage</span>
+          <div class="contact-container" id="modal-contact-form">
+            <div class="paginator">
+              <div class="paginator-item paginator-item-1 is-active">
+                <div class="paginator-item-circle">1</div>
+                <span class="paginator-item-title">Kontaktdaten</span>
+              </div>
+      
+              <div class="paginator-devider"></div>
+      
+              <div class="paginator-item paginator-item-2">
+                <div class="paginator-item-circle">2</div>
+                <span class="paginator-item-title">Thema der Anfrage</span>
+              </div>
+      
+              <div class="paginator-devider"></div>
+              
+              <div class="paginator-item paginator-item-3">
+                <div class="paginator-item-circle">3</div>
+                <span class="paginator-item-title">Erreichbarkeit</span>
+              </div>
             </div>
-    
-            <div class="paginator-devider"></div>
-            
-            <div class="paginator-item paginator-item-3">
-              <div class="paginator-item-circle">3</div>
-              <span class="paginator-item-title">Erreichbarkeit</span>
-            </div>
+      
+            <form action="" class="modal-form">
+              <div class="contact-slide contact-slide-1 is-active">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="hidden-text" for="vorname">Vorname</label>
+                    <input class="text-field" type="text" name="vorname" id="vorname" placeholder="Vorname">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="hidden-text" for="nachname">Nachname</label>
+                    <input class="text-field" type="text" name="nachname" id="nachname" placeholder="Nachname">
+                  </div>
+                </div>
+      
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="hidden-text" for="email">E-Mail</label>
+                    <input class="text-field" type="email" name="email" id="email" placeholder="E-Mail">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="hidden-text" for="telefonnumer">Telefonnumer</label>
+                    <input class="text-field" type="tel" name="telefonnumer" id="telefonnumer" placeholder="Telefonnumer">
+                  </div>
+                </div>
+      
+                <div class="flex-center">
+                  <input type="button" value="weiter" class="btn form-btn js-form-btn-next" id="js-form-btn-next-1">
+                </div>
+              </div>
+      
+              <div class="contact-slide contact-slide-2">  
+                <div class="form-group">
+                  <div class="custom-select-wrapper">
+                    <select name="service" id="service" class="text-field custom-select"><option value="Professionelle Massage">Professionelle Massage</option><option value="Triggerpunkt-Behandlung">Triggerpunkt-Behandlung</option><option value="Schlingentisch">Schlingentisch</option><option value="Elektrotherapie">Elektrotherapie</option><option value="Schmerztherapie">Schmerztherapie</option><option value="Physiotherapie">Physiotherapie</option><option value="Wärmetherapie">Wärmetherapie</option><option value="Kryotherapie">Kryotherapie</option><option value="Allgemeine Kontaktanfrage">Allgemeine Kontaktanfrage</option> </select>
+                  </div>
+                </div>
+      
+                <div class="form-group">
+                  <div class="custom-select-wrapper">
+                    <select name="rezept" id="rezept" class="text-field custom-select"><option value="Ich habe ein Rezept der Krankenkasse">Ich habe ein Rezept der Krankenkasse</option><option value="Ich komme privat, ohne Rezept">Ich komme privat, ohne Rezept</option> </select>
+                  </div>
+                </div>
+      
+                <div class="flex-center">
+                  <input type="button" value="zurück" class="btn form-btn btn-secondary js-form-btn-prev" id="js-form-btn-prev-1">
+                  <input type="button" value="weiter" class="btn form-btn js-form-btn-next" id="js-form-btn-next-2">
+                </div>
+              </div>
+      
+              <div class="contact-slide contact-slide-3">  
+                <div class="form-group">
+                  <label class="hidden-text" for="date">Tag</label>
+                  <input type="date" name="date" id="date" class="text-field" placeholder="Wann benötigen Sie einen Termin? (bei mehreren bitte den frühst möglichen angeben)">                
+                </div>
+      
+                <div class="form-group">
+                  <label class="hidden-text" for="uhrzeit">Tag</label>
+                  <input type="time" name="uhrzeit" id="uhrzeit" class="text-field" placeholder="Uhrzeit">            
+                </div>
+      
+                <div class="form-group">
+                  <label class="hidden-text" for="nachricht">Nachricht</label>
+                  <textarea name="nachricht" id="nachricht" class="text-field textarea" placeholder="Nachricht" rows="4"></textarea>               
+                </div>
+      
+                <div class="flex-center">
+                  <input type="button" value="zurück" class="btn form-btn btn-secondary js-form-btn-prev" id="js-form-btn-prev-2">
+                  <button type="submit" class="btn form-btn">Unverbindliche Anfrage senden</button>
+                </div>
+              </div>
+            </form>
           </div>
-    
-          <form action="" class="modal-form">
-            <div class="contact-slide contact-slide-1 is-active">
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="hidden-text" for="vorname">Vorname</label>
-                  <input class="text-field" type="text" name="vorname" id="vorname" placeholder="Vorname">
-                </div>
-    
-                <div class="form-group">
-                  <label class="hidden-text" for="nachname">Nachname</label>
-                  <input class="text-field" type="text" name="nachname" id="nachname" placeholder="Nachname">
-                </div>
-              </div>
-    
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="hidden-text" for="email">E-Mail</label>
-                  <input class="text-field" type="email" name="email" id="email" placeholder="E-Mail">
-                </div>
-    
-                <div class="form-group">
-                  <label class="hidden-text" for="telefonnumer">Telefonnumer</label>
-                  <input class="text-field" type="tel" name="telefonnumer" id="telefonnumer" placeholder="Telefonnumer">
-                </div>
-              </div>
-    
-              <div class="flex-center">
-                <input type="button" value="weiter" class="btn form-btn js-form-btn-next" id="js-form-btn-next-1">
-              </div>
-            </div>
-    
-            <div class="contact-slide contact-slide-2">  
-              <div class="form-group">
-                <div class="custom-select-wrapper">
-                  <select name="service" id="service" class="text-field custom-select"><option value="Professionelle Massage">Professionelle Massage</option><option value="Triggerpunkt-Behandlung">Triggerpunkt-Behandlung</option><option value="Schlingentisch">Schlingentisch</option><option value="Elektrotherapie">Elektrotherapie</option><option value="Schmerztherapie">Schmerztherapie</option><option value="Physiotherapie">Physiotherapie</option><option value="Wärmetherapie">Wärmetherapie</option><option value="Kryotherapie">Kryotherapie</option><option value="Allgemeine Kontaktanfrage">Allgemeine Kontaktanfrage</option> </select>
-                </div>
-              </div>
-    
-              <div class="form-group">
-                <div class="custom-select-wrapper">
-                  <select name="rezept" id="rezept" class="text-field custom-select"><option value="Ich habe ein Rezept der Krankenkasse">Ich habe ein Rezept der Krankenkasse</option><option value="Ich komme privat, ohne Rezept">Ich komme privat, ohne Rezept</option> </select>
-                </div>
-              </div>
-    
-              <div class="flex-center">
-                <input type="button" value="zurück" class="btn form-btn btn-secondary js-form-btn-prev" id="js-form-btn-prev-1">
-                <input type="button" value="weiter" class="btn form-btn js-form-btn-next" id="js-form-btn-next-2">
-              </div>
-            </div>
-    
-            <div class="contact-slide contact-slide-3">  
-              <div class="form-group">
-                <label class="hidden-text" for="date">Tag</label>
-                <input type="date" name="date" id="date" class="text-field" placeholder="Wann benötigen Sie einen Termin? (bei mehreren bitte den frühst möglichen angeben)">                
-              </div>
-    
-              <div class="form-group">
-                <label class="hidden-text" for="uhrzeit">Tag</label>
-                <input type="time" name="uhrzeit" id="uhrzeit" class="text-field" placeholder="Uhrzeit">            
-              </div>
-    
-              <div class="form-group">
-                <label class="hidden-text" for="nachricht">Nachricht</label>
-                <textarea name="nachricht" id="nachricht" class="text-field textarea" placeholder="Nachricht" rows="4"></textarea>               
-              </div>
-    
-              <div class="flex-center">
-                <input type="button" value="zurück" class="btn form-btn btn-secondary js-form-btn-prev" id="js-form-btn-prev-2">
-                <button type="submit" class="btn form-btn">Unverbindliche Anfrage senden</button>
-              </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>
   </div>
 
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/modal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
   <script src="./scripts/slider.js"></script>
 </body>
