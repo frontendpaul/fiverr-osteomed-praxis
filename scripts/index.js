@@ -19,6 +19,10 @@ submenuToggleBtn.addEventListener('click', () => {
 
 
 // Hero Cards animations
+const toggleHeroAnimation = function(elem) {
+  elem.classList.toggle('is-loaded');
+}
+
 const toggleCardAnimation = function() {
   const heroCards = document.querySelectorAll('.hero-cards .card');
   for (const heroCard of heroCards) {
@@ -26,8 +30,15 @@ const toggleCardAnimation = function() {
   }
 }
 
-window.onload = () => toggleCardAnimation();
-
+const heroTitle = document.querySelector('.hero-title');
+const heroCta = document.querySelector('.hero-content .cta-btn');
+window.onload = () => {
+  toggleCardAnimation();
+  toggleHeroAnimation(heroTitle);
+  if (heroCta != null) {
+    toggleHeroAnimation(heroCta);
+  }
+}
 
 
 // Ufold text handler
